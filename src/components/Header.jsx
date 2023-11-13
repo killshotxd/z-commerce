@@ -42,6 +42,7 @@ const Header = () => {
         {/* PAGES LINKS LI*/}
         <div className="lg:flex items-center gap-8 hidden lg:block">
           <span
+            onClick={() => navigate("/")}
             className={
               location.pathname == "/"
                 ? " font-semibold cursor-pointer"
@@ -51,6 +52,7 @@ const Header = () => {
             Home
           </span>
           <span
+            onClick={() => navigate("/about")}
             className={
               location.pathname == "/about"
                 ? " font-semibold cursor-pointer"
@@ -60,6 +62,7 @@ const Header = () => {
             About
           </span>
           <span
+            onClick={() => navigate("/contact")}
             className={
               location.pathname == "/contact"
                 ? " font-semibold cursor-pointer"
@@ -69,6 +72,7 @@ const Header = () => {
             Contact Us
           </span>
           <span
+            onClick={() => navigate("/blog")}
             className={
               location.pathname == "/blog"
                 ? " font-semibold cursor-pointer"
