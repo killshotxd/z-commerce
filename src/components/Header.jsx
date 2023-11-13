@@ -2,10 +2,14 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
 import {
   AiOutlineHeart,
+  AiOutlineMobile,
   AiOutlineSearch,
   AiOutlineShoppingCart,
   AiOutlineUser,
 } from "react-icons/ai";
+
+import { MdCamera, MdComputer, MdHeadphones, MdWatch } from "react-icons/md";
+import { SiYoutubegaming } from "react-icons/si";
 const Header = () => {
   const { currentUser } = UserAuth();
   console.log(currentUser);
@@ -21,7 +25,7 @@ const Header = () => {
         {/* LOGO */}
 
         {/* SEARCH BOX */}
-        <span className="flex items-center">
+        <span className="flex items-center md:flex hidden">
           <AiOutlineSearch
             size={20}
             className=" relative text-gray-500 top-[1px] left-[24px]"
@@ -29,14 +33,14 @@ const Header = () => {
           <input
             type="text"
             placeholder="Type here"
-            className="input bg-base-200 px-8 w-[433px] max-h-10"
+            className="input bg-base-200 px-8 max-w-[433px] max-h-10"
           />
         </span>
 
         {/* SEARCH BOX */}
 
         {/* PAGES LINKS LI*/}
-        <div className="flex items-center gap-8">
+        <div className="lg:flex items-center gap-8 hidden lg:block">
           <span
             className={
               location.pathname == "/"
@@ -100,6 +104,33 @@ const Header = () => {
         )}
 
         {/* LOGOS */}
+      </div>
+
+      <div className=" lg:flex hidden  py-4 bg-[#2E2E2E]  flex md:px-16 px-2 items-center gap-8 justify-between md:divide-x-2 flex-wrap">
+        <div className="text-slate-200 cursor-pointer px-4 flex items-center gap-3">
+          <AiOutlineMobile />
+          Phone
+        </div>
+        <div className=" text-slate-200 px-4 flex items-center gap-3 cursor-pointer">
+          <MdComputer />
+          Computers
+        </div>
+        <div className="text-slate-200  px-4 flex items-center gap-3 cursor-pointer">
+          <MdWatch />
+          Smart Watches
+        </div>
+        <div className="text-slate-200  px-4 flex items-center gap-3 cursor-pointer">
+          <MdCamera />
+          Cameras
+        </div>
+        <div className="text-slate-200  px-4 flex items-center gap-3 cursor-pointer">
+          <MdHeadphones />
+          Headphones
+        </div>
+        <div className="text-slate-200  px-4 flex items-center gap-3 cursor-pointer">
+          <SiYoutubegaming />
+          Gaming
+        </div>
       </div>
     </>
   );
