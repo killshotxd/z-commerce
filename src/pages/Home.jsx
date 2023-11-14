@@ -1,29 +1,17 @@
+import CardCarousel from "../components/CardCarousel";
 import Carousel from "../components/Carousel";
-import one from "../assets/Square Banner.png";
-import two from "../assets/Wide Square.png";
-import three from "../assets/Big Banner.png";
-import four from "../assets/Square Banner (1).png";
+import Grid from "../components/Grid";
+
 const Home = () => {
   return (
     <>
       <Carousel />
+      <Grid />
+      <div className="py-16 px-8 max-w-5xl m-auto flex flex-col ">
+        <h3 className="text-2xl font-semibold">Browse By Category</h3>
 
-      <div className="grid md:grid-cols-2 grid-cols-1">
-        <div className="flex flex-col">
-          <div>
-            <img className=" w-full" src={two} />
-          </div>
-          <div className="grid grid-cols-2">
-            <div>
-              <img className=" w-full" src={one} />
-            </div>
-            <div>
-              <img className=" w-full" src={four} />
-            </div>
-          </div>
-        </div>
-        <div>
-          <img className=" w-full" src={three} />
+        <div className="py-16">
+          <CardCarousel />
         </div>
       </div>
     </>
