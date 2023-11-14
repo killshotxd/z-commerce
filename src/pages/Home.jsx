@@ -1,6 +1,7 @@
 import CardCarousel from "../components/CardCarousel";
 import Carousel from "../components/Carousel";
 import Grid from "../components/Grid";
+import Tabs from "../components/Tabs";
 
 const Home = () => {
   return (
@@ -12,6 +13,12 @@ const Home = () => {
 
         <div className="py-16">
           <CardCarousel />
+        </div>
+      </div>
+
+      <div className="pb-16 px-8 max-w-5xl m-auto flex flex-col ">
+        <div>
+          <Tabs />
         </div>
       </div>
     </>
