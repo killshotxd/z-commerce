@@ -1,6 +1,7 @@
 import CardCarousel from "../components/CardCarousel";
 import Carousel from "../components/Carousel";
 import Grid from "../components/Grid";
+import ProductGrid from "../components/ProductGrid";
 import Tabs from "../components/Tabs";
 
 const Home = () => {
@@ -19,6 +20,12 @@ const Home = () => {
       <div className="pb-16 px-8 max-w-5xl m-auto flex flex-col ">
         <div>
           <Tabs />
+        </div>
+      </div>
+
+      <div className="pb-16  m-auto flex flex-col ">
+        <div>
+          <ProductGrid />
         </div>
       </div>
     </>
